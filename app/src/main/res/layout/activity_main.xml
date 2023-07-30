@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FEF7FF"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -11,7 +12,7 @@
         android:id="@+id/question_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:gravity="center"
         android:padding="24dp"
         tools:text="@string/question_australia" />
 
@@ -44,12 +45,31 @@
         android:layout_marginTop="24dp"
         android:text="@string/cheat_button" />
 
-    <Button
-        android:id="@+id/next_button"
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next_button"
-        app:icon="@drawable/baseline_arrow_right_24"
-        app:iconGravity="end" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/prev_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/prev_button"
+            app:icon="@drawable/baseline_arrow_left_24"
+            app:iconGravity="start" />
+
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/next_button"
+            app:icon="@drawable/baseline_arrow_right_24"
+            app:iconGravity="end" />
+
+    </LinearLayout>
 
 </LinearLayout>
